@@ -30,4 +30,5 @@ export default (pathfile1, pathfile2) => {
     }
   }
   console.log(result);
+  return result;
 };
