@@ -17,3 +17,4 @@ test('general', () => {
   };
   expect(gendiff(getFixturePath('file1.json'), getFixturePath('file2.json'))).toEqual(result);
 });
+

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-
 import program from 'commander';
 import gendiff from './gendiff.js';
+import format from './formater/stylish.js'
 
 program
   .version('1.0')
@@ -9,7 +9,7 @@ program
   .description('Compares two configuration files and shows a difference')
   .option('-f, --format [type]', 'output format')
   .action((filepath1, filepath2) => {
-    gendiff(filepath1, filepath2);
+    format(gendiff(filepath1, filepath2));
   });
 
 program.parse(process.argv);
