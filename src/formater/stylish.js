@@ -1,30 +1,51 @@
+import _ from 'lodash';
 
-const stringify = () => {
+const stringify = (value, replacer = ' ', spacesCount = 2) => {
+    const iter = (currentValue, depth) => {
+      if (!_.isObject(currentValue)) {
+        return `${currentValue}`;
+      }
+      const indentSize = depth * spacesCount;
+      const currentIndent = replacer.repeat(indentSize);
+      const bracketIndent = replacer.repeat(indentSize - spacesCount);
+      const lines = Object
+        .entries(currentValue)
+        .map(([key, val]) => `${currentIndent}${key}: ${iter(val, depth + 1)}`);
+  
+      return [
+        '{',
+        ...lines,
+        `${bracketIndent}}`,
+      ].join('\n');
+    };
+  
+    return iter(value, 1);
+};
 
-}
-
-export const stylish = (collection) => {
+const stylish = (collection) => {
     const iter = (col, depth) => {
         const result = col.flatMap((node) => {
+            const replacer = ' ';
+            const spaceCount = 2;
             const indentSize = depth * 1;
-            const currentIndent = ' '.repeat(indentSize);
-            const bracketIndent = ' '.repeat(indentSize - 1);
+            const currentIndent = replacer.repeat(indentSize);
+            const bracketIndent = replacer.repeat(indentSize - spaceCount);
             const {type, key, value1, value2, nested} = node;
             if (type === 'not changed') {
-                return `${currentIndent} ' - ' ${key} : ${value2}`
+                return `${currentIndent} '   ' ${key} : ${stringify(value2)}`
             }
 
             if (type === 'changed') {
                 return [
-                    `${currentIndent} ' - ' ${key} : ${value1}`,
-                    `${currentIndent} ' + ' ${key} : ${value2}`,
+                    `${currentIndent} ' - ' ${key} : ${stringify(value1)}`,
+                    `${currentIndent} ' + ' ${key} : ${stringify(value2)}`,
                 ]
             }
             if (type === 'deleted') {
-                return `${currentIndent} ' - ' ${key} : ${value1}`
+                return `${currentIndent} ' - ' ${key} : ${stringify(value1)}`
             }
             if (type === 'added') {
-                return `${currentIndent} ' + ' ${key} : ${value2}`
+                return `${currentIndent} ' + ' ${key} : ${stringify(value2)}`
             }
 
             if (type === 'nested') {
@@ -39,9 +60,10 @@ export const stylish = (collection) => {
     });
     return result;}
     
-    const lines = iter(collection, 1);
-    console.log(['{', ...lines, '}']);
+    const lines = iter(collection, 2);
+    //console.log(['{', ...lines, '}']);
+    return ['{', ...lines, '}'];
 
 };
 
-export default (data) => stylish(data);
+export default (data) => stylish(data).join('\n');
