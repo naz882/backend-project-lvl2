@@ -14,4 +14,4 @@ program
   });
 
 program.parse(process.argv);
-if (program.format) console.log(program.opts());
+//if (program.format) console.log(program.opts());
