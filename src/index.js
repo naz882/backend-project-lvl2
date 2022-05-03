@@ -10,10 +10,8 @@ program
   .option('-f, --format [type]', 'output format', 'stylish')
   .action((filepath1, filepath2, options) => {
     const data = gendiff(filepath1, filepath2);
-    /* eslint-disable-next-line */
     console.log(format(data, options.format));
   });
 
 program.parse(process.argv);
-/* eslint-disable-next-line */
 if (program.format) console.log(program.opts());
