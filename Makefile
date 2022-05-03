@@ -10,3 +10,8 @@ lint:
 test:
 	npx --experimental-vm-modules jest
 
+test-coverage:
+	npm test -- --coverage --coverageProvider=v8
+   
+ci:
+	npm ci
