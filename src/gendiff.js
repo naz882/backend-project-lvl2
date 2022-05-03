@@ -1,6 +1,6 @@
 import path from 'path';
 import _ from 'lodash';
-import readData from './parsers';
+import readData from './parsers.js';
 
 export default (pathfile1, pathfile2) => {
   const before = readData(path.resolve(pathfile1));
