@@ -16,7 +16,7 @@ const checkValue = (value) => {
   }
   return value;
 };
-export const plain = (collection) => {
+export default (collection) => {
   const iter = (col, keyCollection) => {
     const result = col.flatMap((node) => {
       const {
@@ -39,15 +39,14 @@ export const plain = (collection) => {
       if (type === 'nested') {
         return iter(nested, newKeyCollection);
       }
-      if (type === 'not changed') {
-
-      }
+      return null;
     });
     return result;
   };
 
   const lines = iter(collection, '');
   const result = [];
+  /* eslint-disable-next-line */
   for (const line of lines) {
     if (line !== undefined) {
       result.push(line);
@@ -55,5 +54,3 @@ export const plain = (collection) => {
   }
   return result.join('\n');
 };
-
-export default plain;

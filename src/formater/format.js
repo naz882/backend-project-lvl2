@@ -1,8 +1,8 @@
-import stylish from './stylish.js';
-import plain from './plain.js';
-import json from './json.js';
+import stylish from './stylish';
+import plain from './plain';
+import json from './json';
 
-export const format = (data, format) => {
+export default (data, format) => {
   if (format === 'stylish') {
     return stylish(data);
   }
@@ -12,6 +12,5 @@ export const format = (data, format) => {
   if (format === 'json') {
     return json(data);
   }
+  return stylish(data);
 };
-
-export default format;

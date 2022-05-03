@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const stringify = (value, depth, replacer = ' ', spacesCount = 4) => {
+const stringify = (value, depth1, replacer = ' ', spacesCount = 4) => {
   const iter = (currentValue, depth) => {
     if (!_.isObject(currentValue)) {
       return `${currentValue}`;
@@ -19,7 +19,7 @@ const stringify = (value, depth, replacer = ' ', spacesCount = 4) => {
     ].join('\n');
   };
 
-  return iter(value, depth);
+  return iter(value, depth1);
 };
 
 const stylish = (collection) => {
@@ -57,6 +57,7 @@ const stylish = (collection) => {
           `${bracketIndent}}`,
         ];
       }
+      return null;
     });
     return result;
   };

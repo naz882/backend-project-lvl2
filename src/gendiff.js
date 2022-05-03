@@ -1,8 +1,8 @@
 import path from 'path';
 import _ from 'lodash';
-import { readData } from './parsers.js';
+import readData from './parsers';
 
-export const gendiff = (pathfile1, pathfile2) => {
+export default (pathfile1, pathfile2) => {
   const before = readData(path.resolve(pathfile1));
   const after = readData(path.resolve(pathfile2));
   const iter = (file1, file2) => {
@@ -43,5 +43,3 @@ export const gendiff = (pathfile1, pathfile2) => {
 
   return iter(before, after);
 };
-
-export default gendiff;
