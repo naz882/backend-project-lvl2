@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1651583998268" clover="3.2.0">
+  <project timestamp="1651583998268" name="All files">
+    <metrics statements="100" coveredstatements="64" conditionals="56" coveredconditionals="31" methods="18" coveredmethods="12" elements="174" coveredelements="107" complexity="0" loc="100" ncloc="100" packages="2" files="6" classes="6"/>
+    <package name="src">
+      <metrics statements="25" coveredstatements="24" conditionals="18" coveredconditionals="17" methods="4" coveredmethods="4"/>
+      <file name="gendiff.js" path="/Users/nazymguliyev/Documents/projects/hexlet/backend-project-lvl2/src/gendiff.js">
+        <metrics statements="19" coveredstatements="19" conditionals="14" coveredconditionals="14" methods="3" coveredmethods="3"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="18" type="stmt"/>
+        <line num="12" count="18" type="stmt"/>
+        <line num="14" count="18" type="cond" truecount="4" falsecount="0"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="19" count="16" type="cond" truecount="4" falsecount="0"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="25" count="11" type="cond" truecount="4" falsecount="0"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="31" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+      </file>
+      <file name="parsers.js" path="/Users/nazymguliyev/Documents/projects/hexlet/backend-project-lvl2/src/parsers.js">
+        <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.formater">
+      <metrics statements="75" coveredstatements="40" conditionals="38" coveredconditionals="14" methods="14" coveredmethods="8"/>
+      <file name="format.js" path="/Users/nazymguliyev/Documents/projects/hexlet/backend-project-lvl2/src/formater/format.js">
+        <metrics statements="7" coveredstatements="3" conditionals="6" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="json.js" path="/Users/nazymguliyev/Documents/projects/hexlet/backend-project-lvl2/src/formater/json.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+      </file>
+      <file name="plain.js" path="/Users/nazymguliyev/Documents/projects/hexlet/backend-project-lvl2/src/formater/plain.js">
+        <metrics statements="33" coveredstatements="3" conditionals="18" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+      </file>
+      <file name="stylish.js" path="/Users/nazymguliyev/Documents/projects/hexlet/backend-project-lvl2/src/formater/stylish.js">
+        <metrics statements="34" coveredstatements="34" conditionals="14" coveredconditionals="13" methods="7" coveredmethods="7"/>
+        <line num="3" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="18" type="stmt"/>
+        <line num="5" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="20" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="22" count="18" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="28" count="18" type="stmt"/>
+        <line num="29" count="18" type="stmt"/>
+        <line num="30" count="18" type="stmt"/>
+        <line num="31" count="18" type="stmt"/>
+        <line num="32" count="18" type="stmt"/>
+        <line num="35" count="18" type="stmt"/>
+        <line num="36" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="40" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="46" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="49" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="50" count="5" type="stmt"/>
+        <line num="53" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="54" count="4" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
