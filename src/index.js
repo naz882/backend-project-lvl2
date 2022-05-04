@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 import program from 'commander';
-import gendiff from './gendiff.js';
-import format from './formater/format.js';
-import run from './formater/index.js'
+import run from './formater/index.js';
 
 program
   .version('1.0')

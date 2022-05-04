@@ -27,13 +27,13 @@ export default (collection) => {
       const processedValue2 = checkValue(value2);
 
       if (type === 'changed') {
-        return `Property ${newKeyCollection} was updated. From ${processedValue1} to ${processedValue2}`;
+        return `Property '${newKeyCollection}' was updated. From ${processedValue1} to ${processedValue2}`;
       }
       if (type === 'deleted') {
-        return `Property ${newKeyCollection} was removed`;
+        return `Property '${newKeyCollection}' was removed`;
       }
       if (type === 'added') {
-        return `Property ${newKeyCollection} was added with value: ${processedValue2}`;
+        return `Property '${newKeyCollection}' was added with value: ${processedValue2}`;
       }
 
       if (type === 'nested') {
