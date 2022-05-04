@@ -19,7 +19,7 @@
 This program compares two files [.json, .yaml, .yml] and generate difference 
 
 ## Help
-gendiff -h
+`gendiff -h
 
   Usage: gendiff [options]
 
@@ -27,11 +27,11 @@ gendiff -h
 
   Options:
     -V, --version        output the version number
-    -h, --help           display help for command
+    -h, --help           display help for command`
 
 ## Example
 file1.json
-{
+`{
   "host": "hexlet.io",
   "timeout": 50,
   "proxy": "123.234.53.22",
@@ -42,9 +42,9 @@ file2.json
   "timeout": 20,
   "verbose": true,
   "host": "hexlet.io"
-}
+}`
 
-gendiff filepath1.json filepath2.json
+`gendiff filepath1.json filepath2.json
 
 {
   - follow: false
@@ -53,7 +53,7 @@ gendiff filepath1.json filepath2.json
   - timeout: 50
   + timeout: 20
   + verbose: true
-}
+}`
 
 [![asciicast](https://asciinema.org/a/72fPW0tM2XJ7Fjhcg6uB5MJxF.svg)](https://asciinema.org/a/72fPW0tM2XJ7Fjhcg6uB5MJxF)
 
@@ -61,7 +61,7 @@ gendiff filepath1.json filepath2.json
 [![asciicast](https://asciinema.org/a/u5736TqKzv4zZPQaIEZvHWZyV.svg)](https://asciinema.org/a/u5736TqKzv4zZPQaIEZvHWZyV)
 
 ## Example of plain format
-gendiff --format plain filepath1.json filepath2.json
+`gendiff --format plain filepath1.json filepath2.json
 
 Property 'common.follow' was added with value: false
 Property 'common.setting2' was removed
@@ -73,6 +73,6 @@ Property 'common.setting6.ops' was added with value: 'vops'
 Property 'group1.baz' was updated. From 'bas' to 'bars'
 Property 'group1.nest' was updated. From [complex value] to 'str'
 Property 'group2' was removed
-Property 'group3' was added with value: [complex value]
+Property 'group3' was added with value: [complex value]`
 
 [![asciicast](https://asciinema.org/a/ajdAo7hifLMAERkuu3zKqV4hX.svg)](https://asciinema.org/a/ajdAo7hifLMAERkuu3zKqV4hX)
