@@ -45,12 +45,5 @@ export default (collection) => {
   };
 
   const lines = iter(collection, '');
-  const result = [];
-  /* eslint-disable-next-line */
-  for (const line of lines) {
-    if (line !== null) {
-      result.push(line);
-    }
-  }
-  return result.join('\n');
+  return lines.filter((line) => line !== null).join('\n');
 };
