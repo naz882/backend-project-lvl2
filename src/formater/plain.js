@@ -11,10 +11,10 @@ const checkValue = (value) => {
   if (_.isObject(value)) {
     return '[complex value]';
   }
-  if (_.isString(value)) {
+  if (_.isNull(value) || _.isNumber(value) || _.isBoolean(value)) {
     return value;
   }
-  return value;
+  return `'${value}'`;
 };
 export default (collection) => {
   const iter = (col, keyCollection) => {
@@ -27,13 +27,13 @@ export default (collection) => {
       const processedValue2 = checkValue(value2);
 
       if (type === 'changed') {
-        return `Property '${newKeyCollection}' was updated. From '${processedValue1}' to '${processedValue2}'`;
+        return `Property '${newKeyCollection}' was updated. From ${processedValue1} to ${processedValue2}`;
       }
       if (type === 'deleted') {
         return `Property '${newKeyCollection}' was removed`;
       }
       if (type === 'added') {
-        return `Property '${newKeyCollection}' was added with value: '${processedValue2}'`;
+        return `Property '${newKeyCollection}' was added with value: ${processedValue2}`;
       }
 
       if (type === 'nested') {
