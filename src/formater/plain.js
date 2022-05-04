@@ -48,7 +48,7 @@ export default (collection) => {
   const result = [];
   /* eslint-disable-next-line */
   for (const line of lines) {
-    if (line !== undefined) {
+    if (line !== null) {
       result.push(line);
     }
   }
