@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import path, { dirname } from 'path';
-import format from '../src/formater/format';
+import format from '../src/formater';
 import gendiff from '../src/treeBuilder.js';
 import readData from '../src/parsers.js';
 
