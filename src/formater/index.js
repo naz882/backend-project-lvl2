@@ -13,5 +13,5 @@ export default (data, format) => {
     default:
       break;
   }
-  return json(data);
+  return stylish(data);
 };
