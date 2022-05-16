@@ -1,6 +1,6 @@
 import path from 'path';
 import gendiff from './treeBuilder.js';
-import format from './formater/format.js';
+import format from './formater/index.js';
 import readData from './parsers.js';
 
 export default (filepath1, filepath2, formatter = 'stylish') => {
