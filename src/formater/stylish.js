@@ -24,6 +24,7 @@ const stringify = (value, depth1, replacer = ' ', spacesCount = 4) => {
 
 const stylish = (collection) => {
   const iter = (col, depth) => {
+    console.log("ETO COLLECTION", col); 
     const result = col.flatMap((node) => {
       const replacer = ' ';
       const spaceCount = 4;
