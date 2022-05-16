@@ -1,5 +1,5 @@
-import gendiff from './treeBuilder.js';
 import path from 'path';
+import gendiff from './treeBuilder.js';
 import format from './formater/format.js';
 import readData from './parsers.js';
 
