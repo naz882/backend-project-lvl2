@@ -15,19 +15,19 @@ const treeBuilder = (data1, data2) => {
         type: 'added', key, value2,
       };
     }
-    
+
     if (_.isPlainObject(value1) && _.isPlainObject(value2)) {
       return {
         type: 'nested', key, nested: treeBuilder(value1, value2),
       };
     }
-    
+
     if (value1 !== value2) {
       return {
         type: 'changed', key, value1, value2,
       };
     }
-    
+
     return {
       type: 'not changed', key, value2,
     };
