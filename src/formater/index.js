@@ -13,5 +13,4 @@ export default (data, format) => {
     default:
       break;
   }
-  return stylish(data);
 };
