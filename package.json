@@ -4,7 +4,7 @@
   "description": "gendiff",
   "main": "src/formater/index.js",
   "bin": {
-    "gendiff": "src/index.js"
+    "gendiff": "bin/index.js"
   },
   "type": "module",
   "scripts": {

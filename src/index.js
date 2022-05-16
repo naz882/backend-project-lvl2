@@ -1,16 +1,11 @@
-#!/usr/bin/env node
-import program from 'commander';
-import run from './formater/index.js';
+import gendiff from './treeBuilder.js';
+import path from 'path';
+import format from './formater/format.js';
+import readData from './parsers.js';
 
-program
-  .version('1.0')
-  .arguments('<filepath1> <filepath2>')
-  .description('Compares two configuration files and shows a difference')
-  .option('-f, --format [type]', 'output format', 'stylish')
-  .action((filepath1, filepath2, options) => {
-    console.log(run(filepath1, filepath2, options.format));
-    // const data = gendiff(filepath1, filepath2);
-    // console.log(format(data, options.format));
-  });
-
-program.parse(process.argv);
+export default (filepath1, filepath2, formatter) => {
+  const data1 = readData(path.resolve(filepath1));
+  const data2 = readData(path.resolve(filepath2));
+  const data = gendiff(data1, data2);
+  return (format(data, formatter));
+};

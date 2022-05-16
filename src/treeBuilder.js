@@ -1,10 +1,6 @@
-import path from 'path';
 import _ from 'lodash';
-import readData from './parsers.js';
 
-export default (pathfile1, pathfile2) => {
-  const before = readData(path.resolve(pathfile1));
-  const after = readData(path.resolve(pathfile2));
+export default (data1, data2) => {
   const iter = (file1, file2) => {
     const keys = _.sortBy(_.union(_.keys(file1), _.keys(file2)));
     const result = keys.map((key) => {
@@ -41,5 +37,5 @@ export default (pathfile1, pathfile2) => {
     return result;
   };
 
-  return iter(before, after);
+  return iter(data1, data2);
 };

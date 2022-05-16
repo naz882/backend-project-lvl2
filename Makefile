@@ -1,7 +1,7 @@
 install:
 	npm install
 start:
-	npx node src/index.js
+	npx node bin/index.js
 publish:
 	npm publish --dry-run
 	
