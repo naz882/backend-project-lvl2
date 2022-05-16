@@ -13,5 +13,5 @@ export default (data, format) => {
     default:
       break;
   }
-  return null;
+  return json(data);
 };
