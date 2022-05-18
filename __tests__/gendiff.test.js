@@ -3,14 +3,15 @@ import fs from 'fs';
 import path, { dirname } from 'path';
 import format from '../src/formater/index.js';
 import gendiff from '../src/treeBuilder.js';
-import readData from '../src/parsers.js';
+import readData, { readFile } from '../src/parsers.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
-const JSONdata1 = readData(path.resolve(getFixturePath('nested1.json')));
-const JSONdata2 = readData(path.resolve(getFixturePath('nested2.json')));
-const YAMLdata1 = readData(path.resolve(getFixturePath('nested1.yaml')));
+
+const JSONdata1 = readData(readFile(path.resolve(getFixturePath('nested1.json'))), 'json');
+const JSONdata2 = readData(readFile(path.resolve(getFixturePath('nested2.json'))), 'json');
+const YAMLdata1 = readData(readFile(path.resolve(getFixturePath('nested1.yaml'))), 'yaml');
 test('stylish', () => {
   const pathResult = getFixturePath('result_stylish.txt');
   const readResult = fs.readFileSync(pathResult, 'utf-8');
