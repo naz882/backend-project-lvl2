@@ -18,5 +18,3 @@ export default (file, extension) => {
       return JSON.parse(file);
   }
 };
-
-const primer = () => {};
